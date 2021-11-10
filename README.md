@@ -11,8 +11,8 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 ### Pre-requisitos 📋
 
 ```
- - Netbeans 12
- - Java SE
+ - Netbeans 12.4
+ - Java Development Kit
 ```
 
 ### Instalación 🔧
