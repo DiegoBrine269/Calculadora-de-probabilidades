@@ -40,6 +40,6 @@ public class DistribucionBinomial extends DistribucionDiscreta {
 
   @Override
   public boolean validarVariable() {
-    return x >= 0;
+    return  0 <= x && x <= n;
   }
 }

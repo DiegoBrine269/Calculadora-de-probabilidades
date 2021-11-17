@@ -1,6 +1,6 @@
 package calculadora.de.probabilidades;
 public class DistribucionPoisson extends DistribucionDiscreta{
-  // x => 0 
+  // x >= 0 
   public double lambda; //Prromedio de resultados
 
   public DistribucionPoisson(int x, double lambda) {
