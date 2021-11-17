@@ -9,20 +9,14 @@ package calculadora.de.probabilidades;
  *
  * @author Juan M. Hdez
  */
-public class DistribucionDiscreta {
+public abstract class DistribucionDiscreta {
   public int x; //Valor que adopta la variable aleatoria
 
   public DistribucionDiscreta(int x) {
     this.x = x;
   }
   
-  
-   public double distBinomial(int n, double p,  int k){
-    double q = 1 - p;
-    return conbinatoria(n,k) * Math.pow(p,k) * Math.pow(q, n-k);
-  }
-  
-  public long conbinatoria(int n, int r){
+  public long combinatoria(int n, int r){
     return factorial(n)/(factorial(r)*factorial(n-r));
   }
   
@@ -34,7 +28,7 @@ public class DistribucionDiscreta {
     return factorial;
   }
   
-  //public double distAcumulada()
-  
+  public abstract double distAcumulada();
+  //public abstract double desviasionEstandar();
   
 }
