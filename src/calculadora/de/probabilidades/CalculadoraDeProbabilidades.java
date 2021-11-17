@@ -1,8 +1,3 @@
-/* uwu
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package calculadora.de.probabilidades;
 
 import javafx.application.Application;
@@ -48,6 +43,7 @@ public class CalculadoraDeProbabilidades extends Application {
         
       DistribucionBinomial dBinomial = new DistribucionBinomial(2,3,0.25);
       DistribucionGeometrica dGeometrica = new DistribucionGeometrica(5,0.01);
+      DistribucionPoisson dPoisson = new DistribucionPoisson(6,4);
       
       //System.out.println(db.distribucion(1));
       System.out.println(dBinomial.distribucion());
@@ -57,6 +53,9 @@ public class CalculadoraDeProbabilidades extends Application {
       System.out.println(dGeometrica.distAcumulada());
       System.out.println(dGeometrica.media());
       System.out.println(dGeometrica.desviacionEstandar());
+      System.out.println(dPoisson.distribucion());
+      System.out.println(dPoisson.distAcumulada());
+      System.out.println(dPoisson.media());
       //launch(args);
         
         

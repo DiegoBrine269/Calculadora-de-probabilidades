@@ -13,7 +13,6 @@ public class DistribucionGeometrica extends DistribucionDiscreta {
     super(x);
     this.p = p;
     this.q = 1-p;
-    
   }
  
   @Override
