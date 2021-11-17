@@ -45,7 +45,14 @@ public class CalculadoraDeProbabilidades extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        launch(args);
+        
+      DistribucionBinomial db = new DistribucionBinomial(2,3,.25);
+     // System.out.println(db.distribucion(1));
+      System.out.println(db.distribucion());
+      System.out.println(db.distAcumulada());
+      //launch(args);
+        
+        
     }
     
 }
