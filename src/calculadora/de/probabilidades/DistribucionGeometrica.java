@@ -11,10 +11,14 @@ public class DistribucionGeometrica extends DistribucionDiscreta {
 
   public DistribucionGeometrica( int x, double p) {
     super(x);
+    
+    
     this.p = p;
     this.q = 1-p;
   }
  
+  
+  
   @Override
   public double distribucion() {
     return p*Math.pow(q,x-1);
@@ -35,5 +39,10 @@ public class DistribucionGeometrica extends DistribucionDiscreta {
   @Override
   public double varianza() {
     return (1-p)/Math.pow(p,2);
+  }
+
+  @Override
+  public boolean validarVariable() {
+    return x >=1;
   }
 }

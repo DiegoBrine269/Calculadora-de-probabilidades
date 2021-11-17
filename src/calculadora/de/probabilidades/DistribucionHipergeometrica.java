@@ -23,6 +23,11 @@ public class DistribucionHipergeometrica extends DistribucionDiscreta{
   }
  
   @Override
+  public boolean validarVariable() {
+    return Math.max(0, n-(N-k)) <=x && x<= Math.min(n, k);
+  }
+  
+  @Override
   public double distribucion() {
     return (combinatoria(k,x)*combinatoria(N-k,n-x)/combinatoria(N,n));
   }
@@ -41,5 +46,6 @@ public class DistribucionHipergeometrica extends DistribucionDiscreta{
   public double varianza() {
     return (N-n)/(N-1)*n*k/n*(1-k/N);
   }
+
   
 }

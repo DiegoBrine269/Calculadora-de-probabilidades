@@ -11,6 +11,7 @@ public abstract class DistribucionDiscreta {
     this.x = x;
   }
   
+  public abstract boolean validarVariable();
   public abstract double distribucion();
   public abstract double distribucion(int i);
   public abstract double media();

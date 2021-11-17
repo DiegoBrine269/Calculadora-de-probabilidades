@@ -37,4 +37,9 @@ public class DistribucionBinomial extends DistribucionDiscreta {
   public double varianza(){
     return n*p*q;
   }
+
+  @Override
+  public boolean validarVariable() {
+    return x >= 0;
+  }
 }

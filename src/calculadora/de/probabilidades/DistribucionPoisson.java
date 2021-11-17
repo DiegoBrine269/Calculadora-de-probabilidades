@@ -1,15 +1,16 @@
 package calculadora.de.probabilidades;
-
-/**
- *
- * @author Juan M. Hdez
- */
 public class DistribucionPoisson extends DistribucionDiscreta{
+  // x => 0 
   public double lambda; //Prromedio de resultados
 
   public DistribucionPoisson(int x, double lambda) {
     super(x);
     this.lambda = lambda;
+  }
+  
+    @Override
+  public boolean validarVariable() {
+    return x >= 0;
   }
 
   @Override
@@ -30,6 +31,5 @@ public class DistribucionPoisson extends DistribucionDiscreta{
   @Override
   public double varianza() {
     return lambda;
-  }
-  
+  } 
 }
