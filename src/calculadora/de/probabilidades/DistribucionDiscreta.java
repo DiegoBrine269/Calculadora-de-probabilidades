@@ -16,6 +16,22 @@ public abstract class DistribucionDiscreta {
     this.x = x;
   }
   
+  public abstract double distribucion();
+  public abstract double distribucion(int i);
+  public abstract double media();
+  public abstract double varianza();
+  
+  public double distAcumulada(){
+    double distAcumulada = 0;
+    for(int i=0;i<=x;i++)
+      distAcumulada += distribucion(i);
+    return distAcumulada;
+  }
+  
+  public double desviacionEstandar(){
+    return Math.sqrt(varianza());
+  }
+  
   public long combinatoria(int n, int r){
     return factorial(n)/(factorial(r)*factorial(n-r));
   }
@@ -28,7 +44,8 @@ public abstract class DistribucionDiscreta {
     return factorial;
   }
   
-  public abstract double distAcumulada();
+ 
+  
   //public abstract double desviasionEstandar();
   
 }
