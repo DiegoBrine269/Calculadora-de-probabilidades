@@ -1,3 +1,4 @@
 /dist/
 .properties
 **/private
+nbproject/project.xml
