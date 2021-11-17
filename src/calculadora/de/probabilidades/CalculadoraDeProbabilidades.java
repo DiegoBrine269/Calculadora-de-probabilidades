@@ -43,7 +43,7 @@ public class CalculadoraDeProbabilidades extends Application {
         
       DistribucionBinomial dBinomial = new DistribucionBinomial(2,3,0.25);
       DistribucionGeometrica dGeometrica = new DistribucionGeometrica(5,0.01);
-      DistribucionPoisson dPoisson = new DistribucionPoisson(6,4);
+      DistribucionPoisson dPoisson = new DistribucionPoisson(4,6);
       
       //System.out.println(db.distribucion(1));
       System.out.println(dBinomial.distribucion());
