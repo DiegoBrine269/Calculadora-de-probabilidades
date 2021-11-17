@@ -46,10 +46,17 @@ public class CalculadoraDeProbabilidades extends Application {
      */
     public static void main(String[] args) {
         
-      DistribucionBinomial db = new DistribucionBinomial(2,3,.25);
-     // System.out.println(db.distribucion(1));
-      System.out.println(db.distribucion());
-      System.out.println(db.distAcumulada());
+      DistribucionBinomial dBinomial = new DistribucionBinomial(2,3,0.25);
+      DistribucionGeometrica dGeometrica = new DistribucionGeometrica(5,0.01);
+      
+      //System.out.println(db.distribucion(1));
+      System.out.println(dBinomial.distribucion());
+      System.out.println(dBinomial.distAcumulada());
+      
+      System.out.println(dGeometrica.distribucion());
+      System.out.println(dGeometrica.distAcumulada());
+      System.out.println(dGeometrica.media());
+      System.out.println(dGeometrica.desviacionEstandar());
       //launch(args);
         
         
