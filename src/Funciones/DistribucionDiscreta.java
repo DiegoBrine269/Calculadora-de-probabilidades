@@ -1,4 +1,4 @@
-package calculadora.de.probabilidades;
+package Funciones;
 
 /**
  *

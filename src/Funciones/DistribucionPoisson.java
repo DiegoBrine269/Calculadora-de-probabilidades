@@ -1,4 +1,4 @@
-package calculadora.de.probabilidades;
+package Funciones;
 public class DistribucionPoisson extends DistribucionDiscreta{
   // x >= 0 
   public double lambda; //Prromedio de resultados
