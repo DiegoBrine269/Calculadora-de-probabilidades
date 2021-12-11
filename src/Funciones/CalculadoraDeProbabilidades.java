@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package calculadora.de.probabilidades;
+package Funciones;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -45,7 +40,25 @@ public class CalculadoraDeProbabilidades extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        launch(args);
+        
+      DistribucionBinomial dBinomial = new DistribucionBinomial(2,3,0.25);
+      DistribucionGeometrica dGeometrica = new DistribucionGeometrica(5,0.01);
+      DistribucionPoisson dPoisson = new DistribucionPoisson(4,6);
+      
+      //System.out.println(db.distribucion(1));
+      System.out.println(dBinomial.distribucion());
+      System.out.println(dBinomial.distAcumulada());
+      
+      System.out.println(dGeometrica.distribucion());
+      System.out.println(dGeometrica.distAcumulada());
+      System.out.println(dGeometrica.media());
+      System.out.println(dGeometrica.desviacionEstandar());
+      System.out.println(dPoisson.distribucion());
+      System.out.println(dPoisson.distAcumulada());
+      System.out.println(dPoisson.media());
+      //launch(args);
+        
+        
     }
     
 }
