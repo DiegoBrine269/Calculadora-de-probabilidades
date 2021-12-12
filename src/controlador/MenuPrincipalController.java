@@ -55,6 +55,14 @@ public class MenuPrincipalController extends ventanaController {
   public void ir_DistDePoisson(ActionEvent event) throws IOException{
     cambiarVentana(event, "/vista/DistDePoisson.fxml");
   }
+  
+  public void salir(ActionEvent e){
+  Node sour = (Node) e.getSource();     //Me devuelve el elemento al que hice click
+  Stage st = (Stage) sour.getScene().getWindow();    //Me devuelve la ventana donde se encuentra el elemento
+  st.close();                          //Me cierra la ventana
+  }
+  
+  
 }
 
 

@@ -34,7 +34,7 @@
       </Pane>
       <Pane layoutX="173.0" layoutY="171.0" prefHeight="57.0" prefWidth="256.0">
          <children>
-            <Button fx:id="btnCalcular" layoutX="33.0" layoutY="14.0" mnemonicParsing="false" onAction="#calcular" text="Calcular" />
+            <Button fx:id="btnCalcular" defaultButton="true" layoutX="33.0" layoutY="14.0" mnemonicParsing="false" onAction="#calcular" text="Calcular" />
             <Button fx:id="btnLimpiar" layoutX="104.0" layoutY="14.0" mnemonicParsing="false" onAction="#limpiar" text="Limpiar" />
             <Button fx:id="btnVolver" layoutX="174.0" layoutY="14.0" mnemonicParsing="false" onAction="#ir_Menu" text="Volver" />
          </children>

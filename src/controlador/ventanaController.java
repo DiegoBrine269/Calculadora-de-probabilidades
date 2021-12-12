@@ -82,7 +82,7 @@ public class ventanaController implements Initializable {
       txtDesviacion.setText(String.valueOf(df.format(d.desviacionEstandar())));
   }
   
-   public void limpiarResulatdos(){
+   public void limpiarResultados(){
     txtFuncion.setText(null);
     txtFuncionA.setText(null);
     txtEsperanza.setText(null);

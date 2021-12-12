@@ -102,7 +102,7 @@ public class DistBinomialController extends ventanaController {
     }else{
       lblMsgP.setText("Campo obligatorio.");  invalido++;
     }
-    
+    //Necesario comprobar después ya que debemos estar seguros de que n es válido
     if(invalido == 0 ){ //Si no hay errores de formato
       if(!(0 <= x && x <= n)){ // x entre 0 y n
         lblMsgX.setText("0 <= x <= n"); invalido++;

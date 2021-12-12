@@ -1,14 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.DistDePoissonController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="controlador.DistDePoissonController">
     <stylesheets>
-        <URL value="@distdepoisson.css"/>
+        <URL value="@distdepoisson.css" />
     </stylesheets>
+   <children>
+      <Pane layoutX="34.0" layoutY="238.0" prefHeight="200.0" prefWidth="213.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="36.0" layoutY="29.0" prefHeight="17.0" prefWidth="60.0" text="f(x) =" />
+            <Label alignment="CENTER_RIGHT" layoutX="36.0" layoutY="62.0" prefHeight="17.0" prefWidth="60.0" text="F(x) =" />
+            <Label alignment="CENTER_RIGHT" layoutX="36.0" layoutY="92.0" prefHeight="17.0" prefWidth="60.0" text="μ = E(X) =" />
+            <Label alignment="CENTER_RIGHT" layoutX="35.0" layoutY="124.0" prefHeight="17.0" prefWidth="60.0" text="σ² = V(X) =" />
+            <Label alignment="CENTER_RIGHT" layoutX="34.0" layoutY="156.0" prefHeight="17.0" prefWidth="60.0" text="σ =" />
+            <TextField fx:id="txtFuncion" editable="false" layoutX="102.0" layoutY="25.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="txtFuncionA" editable="false" layoutX="102.0" layoutY="58.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="txtEsperanza" editable="false" layoutX="102.0" layoutY="88.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="txtVarianza" editable="false" layoutX="102.0" layoutY="120.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="txtDesviacion" editable="false" layoutX="102.0" layoutY="152.0" prefHeight="25.0" prefWidth="100.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="183.0" layoutY="181.0" prefHeight="57.0" prefWidth="256.0">
+         <children>
+            <Button fx:id="btnCalcular" defaultButton="true" layoutX="33.0" layoutY="14.0" mnemonicParsing="false" onAction="#calcular" text="Calcular" />
+            <Button fx:id="btnLimpiar" layoutX="104.0" layoutY="14.0" mnemonicParsing="false" onAction="#limpiar" text="Limpiar" />
+            <Button fx:id="btnVolver" layoutX="174.0" layoutY="14.0" mnemonicParsing="false" onAction="#ir_Menu" text="Volver" />
+         </children>
+      </Pane>
+      <Pane layoutX="165.0" layoutY="72.0" prefHeight="109.0" prefWidth="431.0">
+         <children>
+            <Label alignment="TOP_RIGHT" layoutX="-7.0" layoutY="47.0" prefHeight="17.0" prefWidth="155.0" text="Promedio de resultados (λt):" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="15.0" layoutY="18.0" prefHeight="17.0" prefWidth="133.0" text="Número de éxitos (x):" />
+            <TextField fx:id="txtX" layoutX="177.0" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="txtLambda" layoutX="177.0" layoutY="43.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label fx:id="lblMsgX" layoutX="292.0" layoutY="18.0" prefHeight="17.0" prefWidth="117.0" textFill="#d20505" />
+            <Label fx:id="lblMsgLambda" layoutX="292.0" layoutY="47.0" prefHeight="17.0" prefWidth="117.0" textFill="#d20505" />
+         </children>
+      </Pane>
+      <BarChart fx:id="grafica" layoutX="247.0" layoutY="232.0" prefHeight="212.0" prefWidth="339.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <Text layoutX="207.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distribución de Poisson">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+   </children>
 </AnchorPane>

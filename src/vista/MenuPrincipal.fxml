@@ -22,7 +22,7 @@
          </cursor></Button>
       <Button fx:id="btnHipergeometrica" layoutX="91.0" layoutY="200.0" mnemonicParsing="false" onAction="#ir_DistHipergeometrica" prefHeight="60.0" prefWidth="172.0" text="Distribución Hipergeométrica" />
       <Button fx:id="btnDePoissom" layoutX="333.0" layoutY="200.0" mnemonicParsing="false" onAction="#ir_DistDePoisson" prefHeight="60.0" prefWidth="172.0" text="Ditribución de Poisson" />
-      <Button contentDisplay="CENTER" layoutX="281.0" layoutY="332.0" mnemonicParsing="false" text="Salir" />
+      <Button fx:id="btnSalir" contentDisplay="CENTER" layoutX="281.0" layoutY="332.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
       <Text boundsType="VISUAL" layoutX="178.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculadora de Distribuciones de Probabilidad Discreta" textAlignment="CENTER" wrappingWidth="247.0751953125" AnchorPane.topAnchor="40.67578125">
          <font>
             <Font size="18.0" />

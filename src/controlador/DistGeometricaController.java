@@ -1,27 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controlador;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.Initializable;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
-/**
- * FXML Controller class
- *
- * @author Juan M. Hdez
- */
-public class DistGeometricaController extends ventanaController implements Initializable {
 
-  /**
-   * Initializes the controller class.
-   */
-  @Override
-  public void initialize(URL url, ResourceBundle rb) {
-    // TODO
-  }  
+public class DistGeometricaController extends ventanaController {
+
+  @FXML
+  private Button btnCalcular;
+  @FXML
+  private Button btnLimpiar;
+  @FXML
+  private Button btnVolver;
+  @FXML
+  private TextField txtX;
+  @FXML
+  private TextField txtP;
+  @FXML
+  private Label lblMsgX;
+  @FXML
+  private Label lblMsgP;
+
+
+  @FXML
+  private void calcular(ActionEvent event) {
+  }
+
+  @FXML
+  private void limpiar(ActionEvent event) {
+  }
+
   
+  //private boolean validar(){}
+
 }
