@@ -12,16 +12,16 @@
         <URL value="@menuprincipal.css" />
     </stylesheets>
    <children>
-      <Button fx:id="btnBinomial" layoutX="91.0" layoutY="112.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="172.0" text="Distribución Binomial">
+      <Button fx:id="btnBinomial" layoutX="91.0" layoutY="112.0" mnemonicParsing="false" onAction="#ir_DistBinomial" prefHeight="60.0" prefWidth="172.0" text="Distribución Binomial">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="333.0" layoutY="112.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="172.0" text="Distribución Geométrica">
+      <Button fx:id="btnGeometrica" layoutX="333.0" layoutY="112.0" mnemonicParsing="false" onAction="#ir_DistGeometrica" prefHeight="60.0" prefWidth="172.0" text="Distribución Geométrica">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="91.0" layoutY="200.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="172.0" text="Distribución Hipergeométrica" />
-      <Button layoutX="333.0" layoutY="200.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="172.0" text="Ditribución de Poisson" />
+      <Button fx:id="btnHipergeometrica" layoutX="91.0" layoutY="200.0" mnemonicParsing="false" onAction="#ir_DistHipergeometrica" prefHeight="60.0" prefWidth="172.0" text="Distribución Hipergeométrica" />
+      <Button fx:id="btnDePoissom" layoutX="333.0" layoutY="200.0" mnemonicParsing="false" onAction="#ir_DistDePoisson" prefHeight="60.0" prefWidth="172.0" text="Ditribución de Poisson" />
       <Button contentDisplay="CENTER" layoutX="281.0" layoutY="332.0" mnemonicParsing="false" text="Salir" />
       <Text boundsType="VISUAL" layoutX="163.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculadora de Distribuciones de Probabilidad Discreta" wrappingWidth="247.0751953125" AnchorPane.topAnchor="40.67578125">
          <font>

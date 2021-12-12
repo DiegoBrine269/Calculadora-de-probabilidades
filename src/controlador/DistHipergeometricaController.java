@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author Juan M. Hdez
  */
-public class DistHipergeometricaController implements Initializable {
+public class DistHipergeometricaController extends ventanaController implements Initializable {
 
   /**
    * Initializes the controller class.

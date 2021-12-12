@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author Juan M. Hdez
  */
-public class DistGeometricaController implements Initializable {
+public class DistGeometricaController extends ventanaController implements Initializable {
 
   /**
    * Initializes the controller class.

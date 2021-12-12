@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author Juan M. Hdez
  */
-public class DistDePoissonController implements Initializable {
+public class DistDePoissonController extends ventanaController implements Initializable {
 
   /**
    * Initializes the controller class.
