@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MenuPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MenuPrincipalController">
     <stylesheets>
         <URL value="@menuprincipal.css" />
     </stylesheets>
@@ -23,7 +23,7 @@
       <Button fx:id="btnHipergeometrica" layoutX="91.0" layoutY="200.0" mnemonicParsing="false" onAction="#ir_DistHipergeometrica" prefHeight="60.0" prefWidth="172.0" text="Distribución Hipergeométrica" />
       <Button fx:id="btnDePoissom" layoutX="333.0" layoutY="200.0" mnemonicParsing="false" onAction="#ir_DistDePoisson" prefHeight="60.0" prefWidth="172.0" text="Ditribución de Poisson" />
       <Button contentDisplay="CENTER" layoutX="281.0" layoutY="332.0" mnemonicParsing="false" text="Salir" />
-      <Text boundsType="VISUAL" layoutX="163.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculadora de Distribuciones de Probabilidad Discreta" wrappingWidth="247.0751953125" AnchorPane.topAnchor="40.67578125">
+      <Text boundsType="VISUAL" layoutX="178.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculadora de Distribuciones de Probabilidad Discreta" textAlignment="CENTER" wrappingWidth="247.0751953125" AnchorPane.topAnchor="40.67578125">
          <font>
             <Font size="18.0" />
          </font>

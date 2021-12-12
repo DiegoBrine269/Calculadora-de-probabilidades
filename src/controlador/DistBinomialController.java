@@ -55,7 +55,8 @@ public class DistBinomialController extends ventanaController {
   private void volver(ActionEvent event) throws IOException {
     ir_Menu(event);
   }
-
+  
+  
    public void graficar(){
     grafica.setAnimated(false);
     grafica.getData().clear();
@@ -64,7 +65,6 @@ public class DistBinomialController extends ventanaController {
     ArrayList<String> Categorias = new ArrayList<>();
     XYChart.Series series1 = new XYChart.Series();
    
-    
     for(int i = 0; i<=n; i++){
       Categorias.add(String.valueOf(i));
       series1.getData().add(new XYChart.Data<String, Number>(String.valueOf(i), db.distribucion(i)));
@@ -80,6 +80,8 @@ public class DistBinomialController extends ventanaController {
     n = Integer.parseInt(txtN.getText());
     p = Double.parseDouble(txtP.getText());
     
+    //PENDIENTE: validar antes de instanciar distribución
+    
     db = new DistribucionBinomial(x,n,p);
     
     txtFuncion.setText(String.valueOf(db.distribucion()));
@@ -87,7 +89,7 @@ public class DistBinomialController extends ventanaController {
     txtEsperanza.setText(String.valueOf(db.media()));
     txtVarianza.setText(String.valueOf(db.varianza()));
     txtDesviacion.setText(String.valueOf(db.desviacionEstandar()));
-    System.out.println("Holaaaaa");
+    
     graficar();
     
     
