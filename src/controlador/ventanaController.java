@@ -3,6 +3,7 @@ package controlador;
 import Funciones.DistribucionDiscreta;
 import java.io.IOException;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -16,12 +17,21 @@ import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ventanaController implements Initializable {
   protected Stage stage;
   protected Scene scene;
   protected Parent root;
+  
+  DecimalFormat df;
+ 
+  @FXML protected TextField txtFuncion;
+  @FXML protected TextField txtFuncionA;
+  @FXML protected TextField txtEsperanza;
+  @FXML protected TextField txtVarianza;
+  @FXML protected TextField txtDesviacion;
   
   @FXML protected BarChart<String, Number> grafica;
   @FXML protected CategoryAxis xAxis;
@@ -60,5 +70,30 @@ public class ventanaController implements Initializable {
     xAxis.setCategories(FXCollections.<String>observableArrayList(Categorias));
     grafica.getData().add(series1);
   }
+  
+  public void mostrarResultados(DistribucionDiscreta d){
+      df = new DecimalFormat();
+      df.setMaximumFractionDigits(4);
+      
+      txtFuncion.setText(String.valueOf(df.format(d.distribucion())));
+      txtFuncionA.setText(String.valueOf(df.format(d.distAcumulada())));
+      txtEsperanza.setText(String.valueOf(df.format(d.media())));
+      txtVarianza.setText(String.valueOf(df.format(d.varianza())));
+      txtDesviacion.setText(String.valueOf(df.format(d.desviacionEstandar())));
+  }
+  
+   public void limpiarResulatdos(){
+    txtFuncion.setText(null);
+    txtFuncionA.setText(null);
+    txtEsperanza.setText(null);
+    txtVarianza.setText(null);
+    txtDesviacion.setText(null);
+    
+    grafica.getData().clear();
+    xAxis.getCategories().clear();
+   }  
 }
+
+
+
 
