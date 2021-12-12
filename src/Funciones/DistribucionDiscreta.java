@@ -17,6 +17,10 @@ public abstract class DistribucionDiscreta {
   public abstract double media();
   public abstract double varianza();
   
+  public void graficar(){
+    
+  }
+  
   public double distAcumulada(){
     double distAcumulada = 0;
     for(int i=0;i<=x;i++)

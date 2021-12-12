@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="428.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.DistBinomialController">
+    <stylesheets>
+        <URL value="@distbinomial.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="24.0" layoutY="228.0" prefHeight="200.0" prefWidth="213.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="36.0" layoutY="29.0" prefHeight="17.0" prefWidth="60.0" text="f(x) =" />
+            <Label alignment="CENTER_RIGHT" layoutX="36.0" layoutY="62.0" prefHeight="17.0" prefWidth="60.0" text="F(x) =" />
+            <Label alignment="CENTER_RIGHT" layoutX="36.0" layoutY="92.0" prefHeight="17.0" prefWidth="60.0" text="μ = E(X) =" />
+            <Label alignment="CENTER_RIGHT" layoutX="36.0" layoutY="124.0" text="σ² = V(X) =" />
+            <TextField editable="false" layoutX="102.0" layoutY="25.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField layoutX="102.0" layoutY="58.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField layoutX="102.0" layoutY="88.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField layoutX="102.0" layoutY="120.0" prefHeight="25.0" prefWidth="100.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="173.0" layoutY="171.0" prefHeight="57.0" prefWidth="256.0">
+         <children>
+            <Button layoutX="33.0" layoutY="14.0" mnemonicParsing="false" text="Calcular" />
+            <Button layoutX="104.0" layoutY="14.0" mnemonicParsing="false" text="Limpiar" />
+            <Button layoutX="174.0" layoutY="14.0" mnemonicParsing="false" text="Volver" />
+         </children>
+      </Pane>
+      <Pane layoutX="155.0" layoutY="62.0" prefHeight="109.0" prefWidth="291.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="74.0" prefHeight="17.0" prefWidth="133.0" text="Probabilidad de éxito (p):">
+               <tooltip>
+                  <Tooltip text="ds" />
+               </tooltip>
+            </Label>
+            <Label alignment="TOP_RIGHT" layoutX="15.0" layoutY="47.0" prefHeight="17.0" prefWidth="133.0" text="Número de ensayos (n):" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="15.0" layoutY="18.0" prefHeight="17.0" prefWidth="133.0" text="Número de éxitos (x):" />
+            <TextField layoutX="177.0" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField layoutX="177.0" layoutY="43.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField layoutX="177.0" layoutY="70.0" prefHeight="25.0" prefWidth="100.0" />
+         </children>
+      </Pane>
+      <Text layoutX="207.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distribución Binomial">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <StackedBarChart layoutX="244.0" layoutY="228.0" prefHeight="186.0" prefWidth="331.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </StackedBarChart>
+   </children>
+</AnchorPane>
