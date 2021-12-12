@@ -25,11 +25,6 @@ public class DistBinomialController extends ventanaController {
   @FXML private TextField txtN;
   @FXML private TextField txtP;
   @FXML private Button btnLimpiar;
-
-  @Override
-  public void initialize(URL url, ResourceBundle rb) {
-    // TODO
-  }  
   
   @FXML
   private void calcular(ActionEvent event) {
