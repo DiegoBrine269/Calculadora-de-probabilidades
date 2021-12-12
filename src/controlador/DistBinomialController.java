@@ -3,16 +3,9 @@ import Funciones.*;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.StackedBarChart;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
@@ -21,58 +14,22 @@ public class DistBinomialController extends ventanaController {
   int x, n;
   double p; 
   
-  @FXML
-  private Button btnVolver;
-  @FXML
-  private TextField txtFuncion;
-  @FXML
-  private Button btnCalcular;
-  @FXML
-  private TextField txtX;
-  @FXML
-  private TextField txtFuncionA;
-  @FXML
-  private TextField txtEsperanza;
-  @FXML
-  private TextField txtVarianza;
-  @FXML
-  private TextField txtDesviacion;
-  @FXML
-  private TextField txtN;
-  @FXML
-  private TextField txtP;
-  
-  @FXML private BarChart<String, Number> grafica;
-  @FXML private CategoryAxis xAxis;
-  @FXML
-  private Button btnLimpiar;
+  @FXML private Button btnVolver;
+  @FXML private TextField txtFuncion;
+  @FXML private Button btnCalcular;
+  @FXML private TextField txtX;
+  @FXML private TextField txtFuncionA;
+  @FXML private TextField txtEsperanza;
+  @FXML private TextField txtVarianza;
+  @FXML private TextField txtDesviacion;
+  @FXML private TextField txtN;
+  @FXML private TextField txtP;
+  @FXML private Button btnLimpiar;
 
   @Override
   public void initialize(URL url, ResourceBundle rb) {
     // TODO
   }  
-
-  private void volver(ActionEvent event) throws IOException {
-    ir_Menu(event);
-  }
-  
-  
-   public void graficar(){
-    grafica.setAnimated(false);
-    grafica.getData().clear();
-    xAxis.getCategories().clear();
-    
-    ArrayList<String> Categorias = new ArrayList<>();
-    XYChart.Series series1 = new XYChart.Series();
-   
-    for(int i = 0; i<=n; i++){
-      Categorias.add(String.valueOf(i));
-      series1.getData().add(new XYChart.Data<String, Number>(String.valueOf(i), db.distribucion(i)));
-    }
-    
-    xAxis.setCategories(FXCollections.<String>observableArrayList(Categorias));
-    grafica.getData().add(series1);
-  }
   
   @FXML
   private void calcular(ActionEvent event) {
@@ -90,9 +47,7 @@ public class DistBinomialController extends ventanaController {
     txtVarianza.setText(String.valueOf(db.varianza()));
     txtDesviacion.setText(String.valueOf(db.desviacionEstandar()));
     
-    graficar();
-    
-    
+    graficar(db, n-3);
   }
 
   @FXML
@@ -100,7 +55,6 @@ public class DistBinomialController extends ventanaController {
   public void ir_Menu(ActionEvent event) throws IOException {
     cambiarVentana(event, "/vista/MenuPrincipal.fxml");
   }
-  
  
   @FXML
    private void  limpiar(){

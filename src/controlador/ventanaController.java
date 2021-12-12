@@ -23,6 +23,9 @@ public class ventanaController implements Initializable {
   protected Scene scene;
   protected Parent root;
   
+  @FXML protected BarChart<String, Number> grafica;
+  @FXML protected CategoryAxis xAxis;
+  
   @Override
   public void initialize(URL url, ResourceBundle rb) {
    
@@ -35,13 +38,11 @@ public class ventanaController implements Initializable {
     stage.setScene(scene);
     stage.show();
   }
+  
   @FXML
   protected void ir_Menu(ActionEvent event) throws IOException{
     cambiarVentana(event, "/vista/MenuPrincipal.fxml");
   }
-  
-  @FXML private BarChart<String, Number> grafica;
-  @FXML private CategoryAxis xAxis;
   
   public void graficar(DistribucionDiscreta d, int n){
     grafica.setAnimated(false);
@@ -59,6 +60,5 @@ public class ventanaController implements Initializable {
     xAxis.setCategories(FXCollections.<String>observableArrayList(Categorias));
     grafica.getData().add(series1);
   }
-  
 }
 
