@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="controlador.DistHipergeometricaController">
+<AnchorPane id="AnchorPane" prefHeight="444.0" prefWidth="690.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.DistHipergeometricaController">
     <stylesheets>
         <URL value="@disthipergeometrica.css" />
     </stylesheets>
@@ -39,7 +39,7 @@
             <Button fx:id="btnVolver" layoutX="174.0" layoutY="14.0" mnemonicParsing="false" onAction="#ir_Menu" text="Volver" />
          </children>
       </Pane>
-      <Pane layoutX="165.0" layoutY="64.0" prefHeight="128.0" prefWidth="431.0">
+      <Pane layoutX="165.0" layoutY="64.0" prefHeight="128.0" prefWidth="479.0">
          <children>
             <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="76.0" prefHeight="17.0" prefWidth="149.0" text="Tamaño de la muestra (n):">
                <tooltip>
@@ -51,16 +51,16 @@
             <TextField fx:id="txtX" layoutX="177.0" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" />
             <TextField fx:id="txtNMay" layoutX="177.0" layoutY="43.0" prefHeight="25.0" prefWidth="100.0" />
             <TextField fx:id="txtNMin" layoutX="177.0" layoutY="72.0" prefHeight="25.0" prefWidth="100.0" />
-            <Label fx:id="lblMsgX" layoutX="292.0" layoutY="18.0" prefHeight="17.0" prefWidth="117.0" textFill="#d20505" />
-            <Label fx:id="lblMsgNMay" layoutX="292.0" layoutY="47.0" prefHeight="17.0" prefWidth="117.0" textFill="#d20505" />
-            <Label fx:id="lblMsgNMin" layoutX="292.0" layoutY="76.0" prefHeight="17.0" prefWidth="117.0" textFill="#d20505" />
+            <Label fx:id="lblMsgX" layoutX="292.0" layoutY="18.0" prefHeight="17.0" prefWidth="182.0" textFill="#d20505" />
+            <Label fx:id="lblMsgNMay" layoutX="292.0" layoutY="47.0" prefHeight="17.0" prefWidth="182.0" textFill="#d20505" />
+            <Label fx:id="lblMsgNMin" layoutX="292.0" layoutY="76.0" prefHeight="17.0" prefWidth="182.0" textFill="#d20505" />
             <Label alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="104.0" prefHeight="17.0" prefWidth="149.0" text="Éxitos en la población (k):">
                <tooltip>
                   <Tooltip text="ds" />
                </tooltip>
             </Label>
             <TextField fx:id="txtK" layoutX="177.0" layoutY="100.0" prefHeight="25.0" prefWidth="100.0" />
-            <Label fx:id="lblMsgK" layoutX="292.0" layoutY="104.0" prefHeight="17.0" prefWidth="117.0" textFill="#d20505" />
+            <Label fx:id="lblMsgK" layoutX="292.0" layoutY="104.0" prefHeight="17.0" prefWidth="182.0" textFill="#d20505" />
          </children>
       </Pane>
       <Text layoutX="170.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distribución Hipergeométrica">
