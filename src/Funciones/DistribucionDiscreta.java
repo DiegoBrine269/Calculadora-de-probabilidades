@@ -32,9 +32,10 @@ public abstract class DistribucionDiscreta {
     return Math.sqrt(varianza());
   }
   
-  public long combinatoria(int n, int r){
-    return factorial(n)/(factorial(r)*factorial(n-r));
-  }
+    public long combinatoria(int n, int r){
+        long comb = factorial(n)/(factorial(r)*factorial(n-r)); 
+        return comb;
+    }
   
   public long factorial(int n){ //Implementación iterativa
     long factorial=1;
