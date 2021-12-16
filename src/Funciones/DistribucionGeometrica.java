@@ -1,9 +1,5 @@
 package Funciones;
 
-/**
- *
- * @author Juan M. Hdez
- */
 public class DistribucionGeometrica extends DistribucionDiscreta {
   // x => 1;
   double p; //Probabilidad de éxito

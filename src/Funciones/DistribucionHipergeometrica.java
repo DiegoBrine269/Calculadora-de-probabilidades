@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Funciones;
 
-/**
- *
- * @author Juan M. Hdez
- */
+
 public class DistribucionHipergeometrica extends DistribucionDiscreta{
   // max{0, n-(N-k)} <= x <= min{n,k}
   public int N; //Tamaño de la poblacion

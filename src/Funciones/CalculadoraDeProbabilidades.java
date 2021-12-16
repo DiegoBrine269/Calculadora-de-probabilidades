@@ -19,11 +19,11 @@ public class CalculadoraDeProbabilidades extends Application {
     Parent root = FXMLLoader.load(getClass().getResource("/vista/MenuPrincipal.fxml"));
     Scene scene = new Scene(root);
     stage.setScene(scene);
+    stage.setResizable(false);
     stage.show();
   }
 
-  public static void main(String[] args) {
+  public static void inicio(String[] args) {
     launch(args);
-  }
-           
+  }     
 }
