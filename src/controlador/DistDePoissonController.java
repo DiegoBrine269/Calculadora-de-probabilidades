@@ -53,12 +53,11 @@ public class DistDePoissonController extends ventanaController {
     lblMsgX.setText(null);
     lblMsgLambda.setText(null);
     
-   
     if(!txtX.getText().isEmpty()){ //Validandoo x
       try{
         x = Integer.parseInt(txtX.getText());
       }catch(NumberFormatException e){
-        lblMsgX.setText("Formato inválido."); valido = false;
+        lblMsgX.setText("Entrada no válida"); valido = false;
         if(x<0){
           lblMsgX.setText("x ≥ 0"); valido = false;
         }
@@ -71,7 +70,7 @@ public class DistDePoissonController extends ventanaController {
       try{
         Lambda = Integer.parseInt(txtLambda.getText());
       }catch(NumberFormatException e){
-         lblMsgLambda.setText("Formato inválido."); valido = false;
+         lblMsgLambda.setText("Entrada no válida"); valido = false;
       }
       if(Lambda<=0){
          lblMsgLambda.setText("λ > 0"); valido = false;

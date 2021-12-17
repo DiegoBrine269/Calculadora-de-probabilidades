@@ -1,14 +1,8 @@
 package controlador;
 import Funciones.*;
 
-import java.io.IOException;
-import java.net.URL;
-import java.text.DecimalFormat;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -16,8 +10,7 @@ import javafx.scene.control.TextField;
 public class DistBinomialController extends ventanaController {
   DistribucionBinomial db;
   int x, n;
-  double p; 
-  DecimalFormat df;
+  double p;
   
   @FXML private Button btnVolver;
   @FXML private Button btnCalcular;
@@ -65,7 +58,7 @@ public class DistBinomialController extends ventanaController {
       try{
         x = Integer.parseInt(txtX.getText());
       }catch(NumberFormatException e){
-        lblMsgX.setText("Formato inválido."); valido = false;
+        lblMsgX.setText("Entrada no válida"); valido = false;
       } 
     }else{
       lblMsgX.setText("Campo obligatorio.");
@@ -75,7 +68,7 @@ public class DistBinomialController extends ventanaController {
       try{
         n = Integer.parseInt(txtN.getText());
       }catch(NumberFormatException e){
-         lblMsgN.setText("Formato inválido."); valido = false;
+         lblMsgN.setText("Entrada no válida"); valido = false;
       }
       if(n<0){
          lblMsgN.setText("n ≥ 0"); valido = false;
@@ -88,7 +81,7 @@ public class DistBinomialController extends ventanaController {
       try{
         p = Double.parseDouble(txtP.getText());
       }catch(NumberFormatException e){
-         lblMsgP.setText("Formato inválido."); valido = false;
+         lblMsgP.setText("Entrada no válida"); valido = false;
       }
       if(!(0<=p && p <=  1)){
          lblMsgP.setText("0 ≤ p ≤1"); valido = false;
