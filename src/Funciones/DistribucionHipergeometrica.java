@@ -42,7 +42,7 @@ public class DistribucionHipergeometrica extends DistribucionDiscreta{
 
   @Override
   public double distribucion(int x) {
-    if (x <= Math.max(0, n-(N-k)))
+    if (x < Math.max(0, n-(N-k)))
       return 0;
     return ((double)combinatoria(k,x)*(double)combinatoria(N-k,n-x)/(double)combinatoria(N,n));
   }
