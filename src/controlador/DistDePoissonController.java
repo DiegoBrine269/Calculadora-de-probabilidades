@@ -17,21 +17,13 @@ public class DistDePoissonController extends ventanaController {
   double Lambda;
   DistribucionPoisson dp;
   
-
-  @FXML
-  private Button btnCalcular;
-  @FXML
-  private Button btnLimpiar;
-  @FXML
-  private Button btnVolver;
-  @FXML
-  private TextField txtX;
-  @FXML
-  private TextField txtLambda;
-  @FXML
-  private Label lblMsgX;
-  @FXML
-  private Label lblMsgLambda;
+  @FXML private Button btnCalcular;
+  @FXML private Button btnLimpiar;
+  @FXML private Button btnVolver;
+  @FXML private TextField txtX;
+  @FXML private TextField txtLambda;
+  @FXML private Label lblMsgX;
+  @FXML private Label lblMsgLambda;
 
   @FXML
   private void calcular(ActionEvent event) {
@@ -47,17 +39,17 @@ public class DistDePoissonController extends ventanaController {
 
   @FXML
    private void  limpiar(){
-    txtX.setText(null);
+    txtX.setText(null); //Limpia entradas
     txtLambda.setText(null);
     
-    lblMsgX.setText(null);
+    lblMsgX.setText(null); //Limpia mensajes de error
     lblMsgLambda.setText(null);
     
     limpiarResultados();
    }
   
-  public boolean  validarCampos(){ 
-    int invalido = 0;
+  public boolean  validarCampos(){
+    boolean valido = true;
     lblMsgX.setText(null);
     lblMsgLambda.setText(null);
     
@@ -66,9 +58,9 @@ public class DistDePoissonController extends ventanaController {
       try{
         x = Integer.parseInt(txtX.getText());
       }catch(NumberFormatException e){
-        lblMsgX.setText("Formato inválido."); invalido++;
+        lblMsgX.setText("Formato inválido."); valido = false;
         if(x<0){
-          lblMsgX.setText("x ≥ 0"); invalido++;
+          lblMsgX.setText("x ≥ 0"); valido = false;
         }
       } 
     }else{
@@ -79,15 +71,15 @@ public class DistDePoissonController extends ventanaController {
       try{
         Lambda = Integer.parseInt(txtLambda.getText());
       }catch(NumberFormatException e){
-         lblMsgLambda.setText("Formato inválido."); invalido++;
+         lblMsgLambda.setText("Formato inválido."); valido = false;
       }
       if(Lambda<=0){
-         lblMsgLambda.setText("λ > 0"); invalido++;
+         lblMsgLambda.setText("λ > 0"); valido = false;
       }
     }else{
-      lblMsgLambda.setText("Campo obligatorio.");  invalido++;
+      lblMsgLambda.setText("Campo obligatorio.");  valido = false;
     }
     
-    return invalido == 0; //true si todo está bien
+    return valido; //true si todo está bien
   }
 }

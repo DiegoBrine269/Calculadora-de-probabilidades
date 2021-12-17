@@ -34,7 +34,7 @@ public class DistBinomialController extends ventanaController {
  
     limpiarResultados();
     
-    if(validarCampos()){ //Validar campos antes de isntanciar la dist. de v.a
+    if(validarCampos()){ //Validar campos antes de instanciar la dist. de v.a
       db = new DistribucionBinomial(x,n,p);
       
       mostrarResultados(db);

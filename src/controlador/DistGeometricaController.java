@@ -12,35 +12,34 @@ public class DistGeometricaController extends ventanaController {
     Double p;
     DistribucionGeometrica dg;
     
-    @FXML
-    private Button btnCalcular;
-    @FXML
-    private Button btnLimpiar;
-    @FXML
-    private Button btnVolver;
-    @FXML
-    private TextField txtX;
-    @FXML
-    private TextField txtP;
-    @FXML
-    private Label lblMsgX;
-    @FXML
-    private Label lblMsgP;
+    @FXML private Button btnCalcular;
+    @FXML private Button btnLimpiar;
+    @FXML private Button btnVolver;
+    @FXML private TextField txtX;
+    @FXML private TextField txtP;
+    @FXML private Label lblMsgX;
+    @FXML private Label lblMsgP;
     
     @FXML
     private void calcular(ActionEvent event) {
+      limpiarResultados();
         if(validarCampos()) {
-            dg = new DistribucionGeometrica(x, p);
-            
+            dg = new DistribucionGeometrica(x, p);     
             mostrarResultados(dg);
             graficar(dg, x);
         }
     }   
 
-    @FXML
-    private void limpiar(ActionEvent event) {
-        limpiarResultados();
-    }
+  @FXML
+  private void limpiar(ActionEvent event) {
+    txtX.setText(null);
+    txtP.setText(null);
+    
+    lblMsgX.setText(null);
+    lblMsgP.setText(null);
+
+    limpiarResultados();
+  }
 
   
     private boolean validarCampos(){
@@ -50,13 +49,11 @@ public class DistGeometricaController extends ventanaController {
         //Validamos que los campos no se encuentren vacíos
         if ( txtX.getText().isEmpty()) {
             lblMsgX.setText("Campo obligatorio");
-            limpiarResultados();
             valido = false;
         }
 
         if( txtP.getText().isEmpty() ){
-            lblMsgP.setText("Campo obligatorio");
-            limpiarResultados();
+            lblMsgP.setText("Campo obligatorio");           
             valido = false;
         }
 
@@ -64,11 +61,10 @@ public class DistGeometricaController extends ventanaController {
         try {
             if(Integer.parseInt( txtX.getText()) < 1  ) {   
                 lblMsgX.setText("x ≥ 1");
-                limpiarResultados();
                 valido = false;
             }
         }
-        catch(Exception e){
+        catch(NumberFormatException e){
                 lblMsgX.setText("Entrada no válida");
                 valido = false;
         }
@@ -78,12 +74,10 @@ public class DistGeometricaController extends ventanaController {
             if( Double.parseDouble(txtP.getText()) < 0 || Double.parseDouble(txtP.getText()) > 1 )
             {   
                 lblMsgP.setText("0 ≤ p ≤ 1");
-                limpiarResultados();
                 valido = false;
-            }
-            
+            }   
         }
-        catch(Exception e){
+        catch(NumberFormatException e){
             lblMsgP.setText("Entrada no válida");
             valido = false;
         } 
@@ -92,8 +86,6 @@ public class DistGeometricaController extends ventanaController {
         if(valido){
             x = Integer.parseInt(txtX.getText());
             p = Double.parseDouble(txtP.getText());
-            lblMsgX.setText("");
-            lblMsgP.setText("");
         }
         
         return valido;
