@@ -41,12 +41,6 @@ public class DistBinomialController extends ventanaController {
       graficar(db, n-3);//distribucón y limite superior del dominio
     }
   }
-
-  @FXML
-  @Override
-  public void ir_Menu(ActionEvent event) throws IOException {
-    cambiarVentana(event, "/vista/MenuPrincipal.fxml");
-  }
  
   @FXML
    private void  limpiar(){
@@ -62,7 +56,7 @@ public class DistBinomialController extends ventanaController {
    }
   
   public boolean  validarCampos(){ 
-    int invalido = 0;
+    boolean valido = true;
     lblMsgX.setText(null);
     lblMsgN.setText(null);
     lblMsgP.setText(null); 
@@ -71,7 +65,7 @@ public class DistBinomialController extends ventanaController {
       try{
         x = Integer.parseInt(txtX.getText());
       }catch(NumberFormatException e){
-        lblMsgX.setText("Formato inválido."); invalido++;
+        lblMsgX.setText("Formato inválido."); valido = false;
       } 
     }else{
       lblMsgX.setText("Campo obligatorio.");
@@ -81,34 +75,34 @@ public class DistBinomialController extends ventanaController {
       try{
         n = Integer.parseInt(txtN.getText());
       }catch(NumberFormatException e){
-         lblMsgN.setText("Formato inválido."); invalido++;
+         lblMsgN.setText("Formato inválido."); valido = false;
       }
       if(n<0){
-         lblMsgN.setText("n >= 0"); invalido++;
+         lblMsgN.setText("n ≥ 0"); valido = false;
       }
     }else{
-      lblMsgN.setText("Campo obligatorio.");  invalido++;
+      lblMsgN.setText("Campo obligatorio.");  valido = false;
     }
     
     if(!txtP.getText().isEmpty()){ //Validando p
       try{
         p = Double.parseDouble(txtP.getText());
       }catch(NumberFormatException e){
-         lblMsgP.setText("Formato inválido."); invalido++;
+         lblMsgP.setText("Formato inválido."); valido = false;
       }
       if(!(0<=p && p <=  1)){
-         lblMsgP.setText("0 <= p <=1"); invalido++;
+         lblMsgP.setText("0 ≤ p ≤1"); valido = false;
       }
     }else{
-      lblMsgP.setText("Campo obligatorio.");  invalido++;
+      lblMsgP.setText("Campo obligatorio.");  valido = false;
     }
     //Necesario comprobar después ya que debemos estar seguros de que n es válido
-    if(invalido == 0 ){ //Si no hay errores de formato
+    if(valido){ //Si no hay errores de formato
       if(!(0 <= x && x <= n)){ // x entre 0 y n
-        lblMsgX.setText("0 <= x <= n"); invalido++;
+        lblMsgX.setText("0 ≤ x ≤ n"); valido = false;
       } 
     }
     
-    return invalido == 0; //true si todo está bien
+    return valido; //true si todo está bien
   }
 }

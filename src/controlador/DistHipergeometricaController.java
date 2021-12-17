@@ -114,7 +114,7 @@ public class DistHipergeometricaController extends ventanaController {
         //Validando rangos en los que se encuentran las entradas
         if ( valido ) {
             if( x < Math.max(0, n - (N - k)) || x > Math.min(n, k) ){
-                lblMsgX.setText("máx{0, n-(N-k)} <= x <= mín{n, k}");
+                lblMsgX.setText("máx{0, n-(N-K)} ≤ x ≤ mín{n, K}");
                 valido = false; 
             }
             
