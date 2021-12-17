@@ -53,7 +53,13 @@ public class DistHipergeometricaController extends ventanaController {
   }
 
     private boolean validarCampos() {
+      
         boolean valido = true;
+        
+      lblMsgX.setText(null); //Limpia mensajes de errores
+      lblMsgNMay.setText(null);
+      lblMsgNMin.setText(null);
+      lblMsgK.setText(null);
 
         //Comprobando que no hayan campos vacíos
         if( txtX.getText().isEmpty() ){

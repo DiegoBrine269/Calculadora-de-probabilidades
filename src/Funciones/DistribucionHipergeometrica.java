@@ -47,8 +47,6 @@ public class DistribucionHipergeometrica extends DistribucionDiscreta{
     return ((double)combinatoria(k,x)*(double)combinatoria(N-k,n-x)/(double)combinatoria(N,n));
   }
   
-  
-
   @Override
   public double media() {
     return n2*k2/N2;

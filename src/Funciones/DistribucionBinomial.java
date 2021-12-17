@@ -1,9 +1,5 @@
 package Funciones;
 
-/**
- *
- * @author Juan M. Hdez
- */
 public class DistribucionBinomial extends DistribucionDiscreta {
   //0 <= x <= n
   int n; //Numero de ensayos

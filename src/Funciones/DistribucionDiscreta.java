@@ -2,10 +2,6 @@ package Funciones;
 
 import java.math.BigInteger;
 
-/**
- *
- * @author Juan M. Hdez
- */
 public abstract class DistribucionDiscreta {
   public int x; //Valor que adopta la variable aleatoria
 
@@ -18,10 +14,6 @@ public abstract class DistribucionDiscreta {
   public abstract double distribucion(int i);
   public abstract double media();
   public abstract double varianza();
-  
-  public void graficar(){
-    
-  }
   
   public double distAcumulada(){
     double distAcumulada = 0;

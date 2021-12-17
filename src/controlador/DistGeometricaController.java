@@ -46,6 +46,9 @@ public class DistGeometricaController extends ventanaController {
 
         boolean valido = true;
         
+        lblMsgX.setText(null);
+        lblMsgP.setText(null);
+        
         //Validamos que los campos no se encuentren vacíos
         if ( txtX.getText().isEmpty()) {
             lblMsgX.setText("Campo obligatorio");

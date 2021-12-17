@@ -12,8 +12,6 @@ public class DistribucionGeometrica extends DistribucionDiscreta {
     this.p = p;
     this.q = 1-p;
   }
- 
-  
   
   @Override
   public double distribucion() {
