@@ -32,7 +32,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Text boundsType="VISUAL" fill="#1d1a2f" layoutX="168.0" layoutY="75.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculadora de Distribuciones de Probabilidad Discreta" textAlignment="CENTER" wrappingWidth="269.029296875" AnchorPane.leftAnchor="169.7607421875" AnchorPane.rightAnchor="170.1318359375" AnchorPane.topAnchor="60.1953125">
+      <Text boundsType="VISUAL" fill="#1d1a2f" layoutX="169.0" layoutY="72.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculadora de Distribuciones Discretas" textAlignment="CENTER" wrappingWidth="266.029296875" AnchorPane.leftAnchor="169.41796875" AnchorPane.rightAnchor="169.474609375" AnchorPane.topAnchor="56.6953125">
          <font>
             <Font size="20.0" />
          </font>

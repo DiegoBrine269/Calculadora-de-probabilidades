@@ -21,7 +21,7 @@ public class CalculadoraDeProbabilidades extends Application {
     Scene scene = new Scene(root);
     stage.setScene(scene);
     stage.getIcons().add(new Image(CalculadoraDeProbabilidades.class.getResourceAsStream("icon.png")));
-    stage.setTitle("Distribuciones discretas");
+    stage.setTitle("Calculadora de Distribuciones Discretas");
     stage.setResizable(false);
     stage.show();
   }
