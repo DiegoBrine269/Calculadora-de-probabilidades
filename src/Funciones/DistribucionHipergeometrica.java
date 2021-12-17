@@ -31,9 +31,9 @@ public class DistribucionHipergeometrica extends DistribucionDiscreta{
   
     @Override
     public double distribucion() {
-        long comb1 = combinatoria(k,x);
-        long comb2 = combinatoria(N-k,n-x);
-        long comb3 = combinatoria(N,n);
+        double comb1 = combinatoria(k,x);
+        double comb2 = combinatoria(N-k,n-x);
+        double comb3 = combinatoria(N,n);
         
         double resultado = (double)comb1 * (double)comb2 / (double)comb3;
 
