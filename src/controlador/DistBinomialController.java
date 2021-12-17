@@ -91,7 +91,7 @@ public class DistBinomialController extends ventanaController {
          lblMsgP.setText("Formato inválido."); valido = false;
       }
       if(!(0<=p && p <=  1)){
-         lblMsgP.setText("0 <= p <=1"); valido = false;
+         lblMsgP.setText("0 ≤ p ≤1"); valido = false;
       }
     }else{
       lblMsgP.setText("Campo obligatorio.");  valido = false;

@@ -7,25 +7,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MenuPrincipalController">
+<AnchorPane id="AnchorPane" maxWidth="600.0" minWidth="600.0" prefHeight="500.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MenuPrincipalController">
     <stylesheets>
         <URL value="@menuprincipal.css" />
     </stylesheets>
    <children>
-      <Button fx:id="btnBinomial" layoutX="91.0" layoutY="112.0" mnemonicParsing="false" onAction="#ir_DistBinomial" prefHeight="60.0" prefWidth="172.0" text="Distribución Binomial">
+      <Button fx:id="btnBinomial" layoutX="93.0" layoutY="167.0" mnemonicParsing="false" onAction="#ir_DistBinomial" prefHeight="60.0" prefWidth="172.0" text="Distribución Binomial X~B(n,p)" textAlignment="CENTER" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="btnGeometrica" layoutX="333.0" layoutY="112.0" mnemonicParsing="false" onAction="#ir_DistGeometrica" prefHeight="60.0" prefWidth="172.0" text="Distribución Geométrica">
+      <Button fx:id="btnGeometrica" layoutX="335.0" layoutY="167.0" mnemonicParsing="false" onAction="#ir_DistGeometrica" prefHeight="60.0" prefWidth="172.0" text="Distribución Geométrica X~G(p)" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="btnHipergeometrica" layoutX="91.0" layoutY="200.0" mnemonicParsing="false" onAction="#ir_DistHipergeometrica" prefHeight="60.0" prefWidth="172.0" text="Distribución Hipergeométrica" />
-      <Button fx:id="btnDePoissom" layoutX="333.0" layoutY="200.0" mnemonicParsing="false" onAction="#ir_DistDePoisson" prefHeight="60.0" prefWidth="172.0" text="Ditribución de Poisson" />
-      <Button fx:id="btnSalir" contentDisplay="CENTER" layoutX="281.0" layoutY="332.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
-      <Text boundsType="VISUAL" layoutX="178.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculadora de Distribuciones de Probabilidad Discreta" textAlignment="CENTER" wrappingWidth="247.0751953125" AnchorPane.topAnchor="40.67578125">
+      <Button fx:id="btnHipergeometrica" layoutX="93.0" layoutY="255.0" mnemonicParsing="false" onAction="#ir_DistHipergeometrica" prefHeight="60.0" prefWidth="172.0" text="Distribución Hipergeométrica X~H(N,n,K)" textAlignment="CENTER" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnDePoissom" layoutX="335.0" layoutY="255.0" mnemonicParsing="false" onAction="#ir_DistDePoisson" prefHeight="60.0" prefWidth="172.0" text="Ditribución de Poisson X~P(λ)" textAlignment="CENTER" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnSalir" contentDisplay="CENTER" layoutX="246.0" layoutY="374.0" mnemonicParsing="false" onAction="#salir" prefHeight="28.0" prefWidth="108.0" text="Salir">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Text boundsType="VISUAL" fill="#1d1a2f" layoutX="168.0" layoutY="75.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculadora de Distribuciones de Probabilidad Discreta" textAlignment="CENTER" wrappingWidth="269.029296875" AnchorPane.leftAnchor="169.7607421875" AnchorPane.rightAnchor="170.1318359375" AnchorPane.topAnchor="60.1953125">
          <font>
-            <Font size="18.0" />
+            <Font size="20.0" />
          </font>
       </Text>
    </children>

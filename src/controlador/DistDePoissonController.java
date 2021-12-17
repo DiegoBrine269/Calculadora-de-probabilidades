@@ -68,7 +68,7 @@ public class DistDePoissonController extends ventanaController {
       }catch(NumberFormatException e){
         lblMsgX.setText("Formato inválido."); invalido++;
         if(x<0){
-          lblMsgX.setText(" x >= 0"); invalido++;
+          lblMsgX.setText("x ≥ 0"); invalido++;
         }
       } 
     }else{

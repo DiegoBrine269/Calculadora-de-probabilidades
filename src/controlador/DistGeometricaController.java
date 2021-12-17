@@ -63,7 +63,7 @@ public class DistGeometricaController extends ventanaController {
         //Validando x
         try {
             if(Integer.parseInt( txtX.getText()) < 1  ) {   
-                lblMsgX.setText("x >= 1");
+                lblMsgX.setText("x ≥ 1");
                 limpiarResultados();
                 valido = false;
             }
@@ -77,7 +77,7 @@ public class DistGeometricaController extends ventanaController {
         try{         
             if( Double.parseDouble(txtP.getText()) < 0 || Double.parseDouble(txtP.getText()) > 1 )
             {   
-                lblMsgP.setText("0 > p >= 1");
+                lblMsgP.setText("0 ≤ p ≤ 1");
                 limpiarResultados();
                 valido = false;
             }
