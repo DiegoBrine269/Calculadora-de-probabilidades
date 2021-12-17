@@ -6,6 +6,8 @@ import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,8 +17,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.stage.Stage;
 
 public class ventanaController implements Initializable {
@@ -26,14 +30,14 @@ public class ventanaController implements Initializable {
   
   DecimalFormat df;
 
+
   @FXML protected TextField txtFuncion;
   @FXML protected TextField txtFuncionA;
   @FXML protected TextField txtEsperanza;
   @FXML protected TextField txtVarianza;
   @FXML protected TextField txtDesviacion;
-  
   @FXML protected CategoryAxis xAxis;
-  //@FXML protected NumberAxis yAxis;
+  @FXML protected NumberAxis yAxis;
   @FXML protected BarChart<String, Number> grafica;// = new BarChart<>(xAxis,yAxis);
   
   
@@ -47,7 +51,9 @@ public class ventanaController implements Initializable {
     stage = (Stage)((Node)event.getSource()).getScene().getWindow();
     scene = new Scene(root);
     stage.setScene(scene);
+    yAxis.setUpperBound(1.0);
     stage.show();
+    
   }
   
   @FXML
@@ -69,21 +75,50 @@ public class ventanaController implements Initializable {
     grafica.getData().clear();
     xAxis.getCategories().clear();
     
-    grafica.setBarGap(0);
+    grafica.setBarGap(1);
     grafica.setCategoryGap(0);
     grafica.setLegendVisible(false);
     
+    Double value;
+    
     ArrayList<String> Categorias = new ArrayList<>();
     XYChart.Series series1 = new XYChart.Series();
-   
-    for(int i = 0; i<=n+3; i++){
-      //Categorias.add(String.valueOf(i));
-      series1.getData().add(new XYChart.Data(String.valueOf(i), d.distribucion(i)));
+    int i=0;
+    while(true){
+      
+      value = d.distribucion(i);
+      if(value<0.001 && i>n)
+         break;
+      
+      final XYChart.Data<String, Number> data = new XYChart.Data(String.valueOf(i), value);
+      data.nodeProperty().addListener(new ChangeListener<Node>() {
+        @Override public void changed(ObservableValue<? extends Node> ov, Node oldNode, Node node) {
+          if (node != null) {
+            setNodeStyle(data, n);
+          } 
+        }
+      });
+      series1.getData().add(data);
+      i++;
     }
-    
-    //xAxis.setCategories(FXCollections.<String>observableArrayList(Categorias));
     grafica.getData().add(series1);
   }
+  
+   private void setNodeStyle(XYChart.Data<String, Number> data, int x) {
+    df = new DecimalFormat();
+    df.setMaximumFractionDigits(4);
+    Node node = data.getNode(); //Etiquetamos las barras
+    Tooltip tp = new Tooltip(String.valueOf(df.format(data.getYValue())));
+    Tooltip.install(node, tp);
+    if (Integer.parseInt(data.getXValue()) == x) {
+      node.setStyle("-fx-bar-fill: #f8961e;");
+    } else if (Integer.parseInt(data.getXValue()) < x) {
+      node.setStyle("-fx-bar-fill: #f94144;");
+    } else {
+      node.setStyle("-fx-bar-fill: #4acc31;");
+    }
+  }
+  
   
     /*
       Método que escribe los atributos de una Distribución en las cajas de texto
@@ -111,6 +146,7 @@ public class ventanaController implements Initializable {
 
         grafica.getData().clear();
         xAxis.getCategories().clear();
+        yAxis.setUpperBound(1.0);
     }  
 }
 

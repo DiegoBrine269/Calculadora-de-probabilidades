@@ -31,7 +31,7 @@ public class DistBinomialController extends ventanaController {
       db = new DistribucionBinomial(x,n,p);
       
       mostrarResultados(db);
-      graficar(db, n-3);//distribucón y limite superior del dominio
+      graficar(db, x);//distribucón y limite superior del dominio
     }
   }
  
