@@ -1,5 +1,11 @@
+
 dist/**
-*.properties
+
+
+
+/dist/
 build/**
+nbproject/
+/nbproject/
 nbproject/**
 

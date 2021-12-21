@@ -1,9 +1,5 @@
-package Funciones;
+package modelo;
 
-/**
- *
- * @author Juan M. Hdez
- */
 public class DistribucionGeometrica extends DistribucionDiscreta {
   // x => 1;
   double p; //Probabilidad de éxito
@@ -16,8 +12,6 @@ public class DistribucionGeometrica extends DistribucionDiscreta {
     this.p = p;
     this.q = 1-p;
   }
- 
-  
   
   @Override
   public double distribucion() {
