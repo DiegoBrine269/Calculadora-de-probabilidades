@@ -1,4 +1,4 @@
-package Funciones;
+package modelo;
 
 import java.math.BigInteger;
 

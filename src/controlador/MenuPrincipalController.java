@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controlador;
 
 import java.io.IOException;
@@ -12,11 +7,6 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Juan M. Hdez
- */
 public class MenuPrincipalController extends ventanaController {
  
 
@@ -28,10 +18,6 @@ public class MenuPrincipalController extends ventanaController {
   private Button btnHipergeometrica;
   @FXML
   private Button btnDePoissom;
-
-  /**
-   * Initializes the controller class.
-   */
   
   @FXML
   public void ir_DistBinomial(ActionEvent event) throws IOException{

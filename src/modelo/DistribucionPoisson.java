@@ -1,4 +1,4 @@
-package Funciones;
+package modelo;
 public class DistribucionPoisson extends DistribucionDiscreta{
   // x >= 0 
   public double lambda; //Prromedio de resultados

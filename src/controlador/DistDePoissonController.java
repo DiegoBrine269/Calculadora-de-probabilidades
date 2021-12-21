@@ -1,5 +1,5 @@
 package controlador;
-import Funciones.DistribucionPoisson;
+import modelo.DistribucionPoisson;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,8 +34,8 @@ public class DistDePoissonController extends ventanaController {
 
   @FXML
    private void  limpiar(){
-    txtX.setText(null); //Limpia entradas
-    txtLambda.setText(null);
+    txtX.clear(); //Limpia entradas
+    txtLambda.clear();
     
     lblMsgX.setText(null); //Limpia mensajes de error
     lblMsgLambda.setText(null);
@@ -58,7 +58,7 @@ public class DistDePoissonController extends ventanaController {
         }
       } 
     }else{
-      lblMsgX.setText("Campo obligatorio.");
+      lblMsgX.setText("Campo obligatorio");
     }
     
     if(!txtLambda.getText().isEmpty()){ //Validando n
@@ -71,7 +71,7 @@ public class DistDePoissonController extends ventanaController {
          lblMsgLambda.setText("λ > 0"); valido = false;
       }
     }else{
-      lblMsgLambda.setText("Campo obligatorio.");  valido = false;
+      lblMsgLambda.setText("Campo obligatorio");  valido = false;
     }
     
     return valido; //true si todo está bien

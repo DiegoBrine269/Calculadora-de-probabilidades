@@ -1,4 +1,4 @@
-package Funciones;
+package modelo;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;

@@ -1,5 +1,5 @@
 
-package Funciones;
+package modelo;
 
 
 public class DistribucionHipergeometrica extends DistribucionDiscreta{

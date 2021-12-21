@@ -1,4 +1,4 @@
-package Funciones;
+package modelo;
 
 public class DistribucionBinomial extends DistribucionDiscreta {
   //0 <= x <= n

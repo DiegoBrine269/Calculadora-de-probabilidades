@@ -1,5 +1,5 @@
 package controlador;
-import Funciones.*;
+import modelo.DistribucionBinomial;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,9 +37,9 @@ public class DistBinomialController extends ventanaController {
  
   @FXML
    private void  limpiar(){
-    txtX.setText(null);
-    txtN.setText(null);
-    txtP.setText(null); 
+    txtX.clear();
+    txtN.clear();
+    txtP.clear();
      
     lblMsgX.setText(null);
     lblMsgN.setText(null);
@@ -61,7 +61,7 @@ public class DistBinomialController extends ventanaController {
         lblMsgX.setText("Entrada no válida"); valido = false;
       } 
     }else{
-      lblMsgX.setText("Campo obligatorio.");
+      lblMsgX.setText("Campo obligatorio");
     }
     
     if(!txtN.getText().isEmpty()){ //Validando n
@@ -74,7 +74,7 @@ public class DistBinomialController extends ventanaController {
          lblMsgN.setText("n ≥ 0"); valido = false;
       }
     }else{
-      lblMsgN.setText("Campo obligatorio.");  valido = false;
+      lblMsgN.setText("Campo obligatorio");  valido = false;
     }
     
     if(!txtP.getText().isEmpty()){ //Validando p
@@ -87,7 +87,7 @@ public class DistBinomialController extends ventanaController {
          lblMsgP.setText("0 ≤ p ≤1"); valido = false;
       }
     }else{
-      lblMsgP.setText("Campo obligatorio.");  valido = false;
+      lblMsgP.setText("Campo obligatorio");  valido = false;
     }
     //Necesario comprobar después ya que debemos estar seguros de que n es válido
     if(valido){ //Si no hay errores de formato

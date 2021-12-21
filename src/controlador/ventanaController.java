@@ -1,10 +1,9 @@
 package controlador;
 
-import Funciones.DistribucionDiscreta;
+import modelo.DistribucionDiscreta;
 import java.io.IOException;
 import java.net.URL;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -29,8 +28,7 @@ public class ventanaController implements Initializable {
   protected Parent root;
   
   DecimalFormat df;
-
-
+  
   @FXML protected TextField txtFuncion;
   @FXML protected TextField txtFuncionA;
   @FXML protected TextField txtEsperanza;
@@ -39,7 +37,6 @@ public class ventanaController implements Initializable {
   @FXML protected CategoryAxis xAxis;
   @FXML protected NumberAxis yAxis;
   @FXML protected BarChart<String, Number> grafica;// = new BarChart<>(xAxis,yAxis);
-  
   
   @Override
   public void initialize(URL url, ResourceBundle rb) {
@@ -56,10 +53,11 @@ public class ventanaController implements Initializable {
     
   }
   
-  @FXML
+ 
   /*
     Método que nos permite regresar al menú principal
-  */
+  */ 
+  @FXML
   protected void ir_Menu(ActionEvent event) throws IOException{
     cambiarVentana(event, "/vista/MenuPrincipal.fxml");
   }
@@ -80,8 +78,7 @@ public class ventanaController implements Initializable {
     grafica.setLegendVisible(false);
     
     Double value;
-    
-    ArrayList<String> Categorias = new ArrayList<>();
+   
     XYChart.Series series1 = new XYChart.Series();
     int i=0;
     while(true){
@@ -135,21 +132,16 @@ public class ventanaController implements Initializable {
         txtVarianza.setText(String.valueOf(df.format(d.varianza())));
         txtDesviacion.setText(String.valueOf(df.format(d.desviacionEstandar())));
     }
-  
-  
+   
     public void limpiarResultados(){
-        txtFuncion.setText(null);
-        txtFuncionA.setText(null);
-        txtEsperanza.setText(null);
-        txtVarianza.setText(null);
-        txtDesviacion.setText(null);
+        txtFuncion.clear();
+        txtFuncionA.clear();
+        txtEsperanza.clear();
+        txtVarianza.clear();
+        txtDesviacion.clear();
 
         grafica.getData().clear();
         xAxis.getCategories().clear();
         yAxis.setUpperBound(1.0);
     }  
 }
-
-
-
-

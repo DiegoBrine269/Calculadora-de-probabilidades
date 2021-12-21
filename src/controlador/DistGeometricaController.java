@@ -1,6 +1,6 @@
 package controlador;
 
-import Funciones.DistribucionGeometrica;
+import modelo.DistribucionGeometrica;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -32,8 +32,8 @@ public class DistGeometricaController extends ventanaController {
 
   @FXML
   private void limpiar(ActionEvent event) {
-    txtX.setText(null);
-    txtP.setText(null);
+    txtX.clear();
+    txtP.clear();
     
     lblMsgX.setText(null);
     lblMsgP.setText(null);

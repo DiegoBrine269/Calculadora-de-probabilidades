@@ -1,4 +1,4 @@
-package Funciones;
+package modelo;
 
 public class DistribucionGeometrica extends DistribucionDiscreta {
   // x => 1;

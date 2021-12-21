@@ -1,6 +1,6 @@
 package controlador;
 
-import Funciones.DistribucionHipergeometrica;
+import modelo.DistribucionHipergeometrica;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -37,10 +37,10 @@ public class DistHipergeometricaController extends ventanaController {
 
   @FXML
   private void limpiar(ActionEvent event) {
-    txtX.setText(null); //Limpia Entradas
-    txtNMay.setText(null);
-    txtNMin.setText(null);
-    txtK.setText(null);
+    txtX.clear(); //Limpia Entradas
+    txtNMay.clear();
+    txtNMin.clear();
+    txtK.clear();
     
     lblMsgX.setText(null); //Limpia mensajes de errores
     lblMsgNMay.setText(null);
