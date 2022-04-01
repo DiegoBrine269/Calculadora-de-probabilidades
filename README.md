@@ -27,7 +27,7 @@ _Compilar con el comando javac_
 ```
 javac Main.java
 ```
-
+[Casos de uso]: http://limni.net/blog/
 ## Autores ✒️
 
 _Equipo 1:_
