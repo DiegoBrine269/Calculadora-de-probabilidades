@@ -29,7 +29,7 @@ javac Main.java
 ```
 Me llamo Javier Cristóbal y tengo un blog sobre [productividad mac][blog].
 Casos de uso: 
-[blog]: https://github.com/DiegoBrine269/Calculadora-de-probabilidades/main/CasosDeUso.md
+[blog]: https://github.com/DiegoBrine269/Calculadora-de-probabilidades/blob/main/CasosDeUso.md
 
 ## Autores ✒️
 
@@ -44,7 +44,7 @@ _Equipo 1:_
 
 
 ## Expresiones de Gratitud 🎁
-
+ 
 * Comenta a otros sobre este proyecto 📢
 * Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
 
